@@ -21,6 +21,13 @@
             <artifactId>cucumber-java</artifactId>
             <version>7.12.1</version>
         </dependency>
+             <dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.22</version> <!-- Update to the appropriate version -->
+    <scope>provided</scope>
+</dependency>
+
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
