@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class sampleFile {
     public static void main(String[] args) {
       WebDriverManager.chromedriver().setup();
-       // WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
 //        driver.get("https://uat.portal.infinitbar.com/");
 //        System.out.println("finally executed");
 //        driver.quit();
