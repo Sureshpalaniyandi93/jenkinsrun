@@ -6,36 +6,34 @@ import org.openqa.selenium.WebElement;
 
 
 public class sampleFile {
-    public static void main(String[] args) {
-      WebDriverManager.chromedriver().setup();
+   @Test(invocationCount = 1,priority = -1)
+    public void sample() {
+
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-//        driver.get("https://uat.portal.infinitbar.com/");
-//        System.out.println("finally executed");
-//        driver.quit();
-        driver.get("https://www.google.com");
+        driver.get("https://uat.portal.infinitbar.com/");
+        String source = driver.getPageSource();
+        System.out.println(source);
+        driver.quit();
 
-        WebElement searchBox = driver.findElement(By.name("q"));
-        searchBox.sendKeys("Samsung Galaxy");
-        searchBox.submit();
+    } @Test(invocationCount =2,priority = 5)
+    public void sample2() {
 
-        // Iterate through 10 pages of search results
-        for (int i = 1; i <= 10; i++) {
-            System.out.println("Page " + i + ":\n-------------------");
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.google.com/");
+        String source = driver.getPageSource();
+        System.out.println(source);
+        driver.quit();
 
-            // Print text from the current page
-            System.out.println(driver.findElement(By.tagName("body")).getText());
+    } @Test(invocationCount =3,priority = 0)
+    public void sample1() {
 
-            // Click on the next page button
-          
-            // Wait for a short while for the next page to load
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-
-        // Close the browser
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://felix.keka.com/#/home/dashboard");
+        String source = driver.getPageSource();
+        System.out.println(source);
         driver.quit();
     }
 }
