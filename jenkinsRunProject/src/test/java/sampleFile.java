@@ -16,6 +16,8 @@ public class tabel {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.google.com");
+          System.out.println("hello world");
+
       
     }
 }
